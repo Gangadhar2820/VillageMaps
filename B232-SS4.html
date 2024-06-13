@@ -3,32 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>B232-SS4</title>
+    <title>Document</title>
     <style>
       * {
-        margin: 0px;
-        padding: 0px;
+        padding: 0;
+        margin: 0;
         box-sizing: border-box;
       }
-      body {
+
+      .container {
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: green;
+        width: 100%;
         min-height: 100vh;
       }
-      #mycanvas {
+      canvas {
         background-color: aliceblue;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <canvas id="mycanvas"></canvas>
+      <canvas></canvas>
     </div>
     <script>
-      const canvas = document.getElementById("mycanvas");
-      canvas.height = 550;
-      canvas.width = 900;
+      const canvas = document.querySelector("canvas")
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
       const ctx = canvas.getContext("2d");
 
       ctx.translate(200, canvas.height - 100);
@@ -85,7 +88,44 @@
 
 
       ctx.beginPath();
-     
+      ctx.moveTo(30,-30);
+      drawPole(30,-70,"A1","left");
+      ctx.moveTo(36,-70);
+      drawPole(76,-70,"A2","right");
+      ctx.moveTo(76,-76);
+      drawPole(76,-116,"A3","right");
+      ctx.moveTo(70,-116);
+      drawPole(30,-116,"A4","left");
+      ctx.moveTo(30,-122);
+      drawPole(30,-162,"A5","left");
+      ctx.moveTo(36,-162);
+      drawPole(76,-162,"","right");
+      ctx.moveTo(30,-168);
+      drawPole(30,-208,"A6","left");
+      ctx.moveTo(36,-208);
+      drawPole(76,-208,"A6-1","bottom");
+      ctx.moveTo(82,-208);
+      drawPole(122,-208,"A6-2","right");
+      ctx.moveTo(122,-216);
+      drawPole(122,-256,"A6-2/1B","right");
+      ctx.moveTo(122,-204);
+      drawPole(122,-164,"A6-2/1A","right");
+      ctx.moveTo(122,-158);
+      drawPole(122,-118,"A6-2/2A","right");
+      ctx.moveTo(30,-214);
+      drawPole(30,-254,"A7","right");
+      ctx.moveTo(24,-254);
+      drawPole(-16,-254,"A7-1","bottom");
+      ctx.moveTo(-22,-254);
+      drawPole(-62,-254,"A7-2","left");
+      ctx.moveTo(30,-260);
+      drawPole(30,-300,"A8","top");
+      ctx.moveTo(36,-300);
+      drawPole(76,-300,"A9","top");
+      ctx.moveTo(82,-300);
+      drawPole(122,-300,"A10","top");
+      ctx.moveTo(128,-300);
+      drawPole(168,-300,"","top");
 
       ctx.closePath();
 
