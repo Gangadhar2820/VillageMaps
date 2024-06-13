@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>B232-SS5</title>
+    <title>B260-SS1</title>
     <style>
       * {
         padding: 0;
@@ -30,9 +30,9 @@
     <script>
       const canvas = document.querySelector("canvas");
       canvas.height = 500;
-      canvas.width = 500;
+      canvas.width = 600;
       const ctx = canvas.getContext("2d");
-      ctx.translate(350, 400);
+      ctx.translate(400, 400);
 
       (function drawTransformer(name) {
         ctx.lineWidth = 2;
@@ -47,7 +47,7 @@
         ctx.stroke();
         ctx.fillText(name, -10, 15);
         ctx.closePath();
-      })("SS5");
+      })("SS1");
 
       const k = 6; // pole circle radius
 
@@ -87,43 +87,73 @@
       }
 
       ctx.beginPath();
+      ctx.moveTo(0,30);
+      drawPole(0,60,"A1","bottom");
+      ctx.moveTo(-6,60);
+      drawPole(-46,60,"","left");
       ctx.moveTo(0,-30);
-      drawPole(0,-60,"A1","right");
-      ctx.moveTo(0,-66);
-      drawPole(0,-96,"A2","right");
-      ctx.moveTo(0,-102);
-      drawPole(0,-132,"A3","right");
-      ctx.moveTo(0,-138);
-      drawPole(0,-168,"A4","right");
-      ctx.moveTo(-6,-168);
-      drawPole(-36,-168,"A5","left");
-      ctx.moveTo(-36,-174);
-      drawPole(-36,-204,"A6","right");
-      ctx.moveTo(-6,-60);
-      drawPole(-46,-60,"A1-1","bottom");
-      ctx.moveTo(-46,-66);
-      drawPole(-46,-96,"A1-2","left");
-      ctx.moveTo(-46,-102);
-      drawPole(-46,-128,"A1-3","top");
-      ctx.moveTo(-52,-128);
-      drawPole(-82,-128,"A1-4","top");
-      ctx.moveTo(-88,-128);
-      drawPole(-118,-128,"A1-5","top");
-      ctx.moveTo(-124,-128);
-      drawPole(-154,-128,"A1-6","bottom");
-      ctx.moveTo(-160,-128);
-      drawPole(-190,-128,"A1-7","top");
-      ctx.moveTo(-196,-128);
-      drawPole(-226,-128,"A1-8","top");
-      ctx.moveTo(-154,-134);
-      drawPole(-154,-164,"A1-6/1","top");
+      drawPole(0,-60,"","left");
+      ctx.moveTo(6,60);
+      drawPole(66,60,"A2","bottom");
+      ctx.moveTo(66,54);
+      drawPole(66,24,"A3","right");
+      ctx.moveTo(66,18);
+      drawPole(66,-12,"A4","right");
+      ctx.moveTo(66,-18);
+      drawPole(66,-48,"A5","right");
+      ctx.moveTo(66,-52);
+      drawPole(66,-82,"A6","right");
+      ctx.moveTo(66,-88);
+      drawPole(46,-128,"A7","right");
+      ctx.moveTo(46,-134);
+      drawPole(46,-174,"A8","right");
+      ctx.moveTo(46,-180);
+      drawPole(46,-200,"A9","right");
+      ctx.moveTo(46,-206);
+      drawPole(46,-266,"A10","right");
+      ctx.moveTo(46,-272);
+      drawPole(46,-302,"A11","right");
+      ctx.moveTo(40,-266);
+      drawPole(10,-266,"A10-1","top");
+      ctx.moveTo(4,-266);
+      drawPole(-26,-266,"A10-2","left");
+      ctx.moveTo(10,-260);
+      drawPole(10,-240,"A10-1/1","left");
+      ctx.moveTo(40,-266);
+      drawPole(10,-266,"A10-1","top");
+      ctx.moveTo(40,-200);
+      drawPole(10,-200,"A9-1","top");
+      ctx.moveTo(4,-200);
+      drawPole(-66,-200,"A9-2","top");
+      ctx.moveTo(-72,-200);
+      drawPole(-102,-200,"A9-3","top");
+      ctx.moveTo(-108,-200);
+      drawPole(-138,-200,"A9-4","top");
+      ctx.moveTo(-144,-200);
+      drawPole(-174,-200,"A9-5","top");
+      ctx.moveTo(-180,-200);
+      drawPole(-210,-200,"A9-6","top");
+      ctx.moveTo(-66,-194);
+      drawPole(-66,-174,"A9-2","left");
+      ctx.moveTo(-66,-168);
+      drawPole(-66,-148,"A9-3","left");
+      ctx.moveTo(40,-174);
+      drawPole(-30,-174,"A8-1","top");
+      ctx.moveTo(-30,-168);
+      drawPole(-30,-128,"A8-2","left");
+      ctx.moveTo(-30,-122);
+      drawPole(-30,-82,"A8-3","left");
+      ctx.moveTo(-24,-128);
+      drawPole(16,-128,"","bottom");
+      
       ctx.closePath();
 
-      ctx.translate(-350, -400);
+
+      ctx.translate(-400, -400);
       ctx.direction = "ltr";
       ctx.fillStyle = "dodgerblue";
       ctx.font = "24px serif";
-      ctx.fillText("B232-Tootipala (SS5)", canvas.width / 2 - 100, 30);
+      ctx.fillText("B260-Adigarlapalem (SS1)", canvas.width / 2 - 100, 30);
     </script>
   </body>
 </html>
